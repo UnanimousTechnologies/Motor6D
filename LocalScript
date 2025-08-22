@@ -1,0 +1,8 @@
+local anim = Instance.new("Animation")
+anim.AnimationId = "rbxassetid://1234567890" -- replace with your own animation ID
+local player = game.Players.LocalPlayer
+local humanoid = player.Character or player.CharacterAdded:Wait()
+humanoid = humanoid:WaitForChild("Humanoid")
+local track = humanoid:LoadAnimation(anim)
+track:Play()
+
